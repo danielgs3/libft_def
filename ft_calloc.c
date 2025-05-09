@@ -6,32 +6,29 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 17:21:43 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/08 18:14:44 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/09 14:51:19 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-It allocates memory for a given size and sets it to zero.
-
-param size_t nmemb The number of elements to be allocated.
-param size_t size The size of the memory block, in bytes.
-
-return A pointer to the allocated memory.
-*/
-
-void *calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total;
-	void	*m;
+	size_t	i;
+	unsigned char	*m;
 
 	total = nmemb * size;
-	if (nmemb = 0 && total / nmemb != size) //if(total > sizeof(size_t) return;
-		return ;
+	if (nmemb != 0 && total / nmemb != size)
+		return (NULL);
 	m = malloc (nmemb * size);
 	if (!m)
-		return ;
-	while (total)
-
+		return (NULL);
+	i = 0;
+	while (i < total)
+	{
+		m[i] = 0;
+		i++;
+	}
+	return(m);
 }
