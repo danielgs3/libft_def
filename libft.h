@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:05:17 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/15 18:47:10 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/20 17:05:40 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ int	ft_isalpha(int c);
 int	ft_isascii(int c);
 int	ft_isdigit(int c);
 int	ft_isprint(int c);
-void *ft_memchr(const void *s, int c, size_t n);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void *ft_memmove(void *dest, const void *src, size_t len);
-
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *s);
+char	**ft_split(const char *s, char c);
 
 
 #endif
