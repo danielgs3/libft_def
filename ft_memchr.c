@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 12:09:26 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/15 18:48:19 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/22 11:54:50 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void *ft_memchr(const void *s, int c, size_t n)
 
 
 	str = (unsigned char *) s;
-	cc = (unsigned char *) c;
+	cc = (unsigned char) c;
 	i = 0;
 
 	while (n > i)

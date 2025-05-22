@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 10:30:18 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/15 18:46:26 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/22 11:55:36 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void *ft_memmove(void *dest, const void *src, size_t len)
 {
-	unsigned char *a_src;
-	unsigned char *b_dest;
-	int i;
+	unsigned char	*a_src;
+	unsigned char	*b_dest;
+	size_t 			i;
 
 	if (!src && !dest)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 06:06:40 by danielg3          #+#    #+#             */
-/*   Updated: 2025/04/11 06:15:44 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/22 12:05:50 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ y devuelve la longitud total de la cadena que intentó crear.
 }
 
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 
 int main(void)
@@ -61,4 +61,4 @@ int main(void)
 
 
    return 0;
-}
+} */

@@ -6,9 +6,11 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:21:19 by danielg3          #+#    #+#             */
-/*   Updated: 2025/04/29 11:30:15 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/22 11:57:34 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {

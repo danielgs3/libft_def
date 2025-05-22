@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:03:59 by danielg3          #+#    #+#             */
-/*   Updated: 2025/04/15 17:50:44 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/22 12:06:12 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n) // como argmumentos el 
 	return (0);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 
 int main()
@@ -34,7 +34,7 @@ int main()
    printf("%d", ft_strncmp("Hello", "HelloWorld", 8));
    printf("%d", ft_strncmp("Hel", "HelloWor", 10));
    printf("%d", ft_strncmp("H", "HelloWorld", 6));
-}
+} */
 
 
 

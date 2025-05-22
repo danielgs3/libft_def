@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 03:02:04 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/01 17:39:54 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/22 12:06:00 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int ft_tolower(int c) // declara la función
 }
 
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int main(void)
 {
@@ -40,4 +40,4 @@ int main(void)
 	c = 'O';
    printf("%c\n", ft_tolower(c)); // %c cuando es ..., %s cuando es string, %d cuando es numero
 	return(0);
-}
+} */
