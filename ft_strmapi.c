@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 13:03:59 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/27 15:31:28 by danielg3         ###   ########.fr       */
+/*   Created: 2025/05/09 08:31:33 by danielg3          #+#    #+#             */
+/*   Updated: 2025/05/27 17:18:01 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int    ft_strlcpy(char *dest, char *src, unsigned int size)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-   unsigned int    i;
-   unsigned int    j;
+	char *res;
+	unsigned int i;
 
-   j = ft_strlen(src);
-   i = 0;
-   if (size != 0)
-   {
-       while (src [i] != '\0' && i < size - 1) //
-       {
-           dest[i] = src[i];
-           i++;
-       }
-       dest[i] = '\0';
-   }
-   return (j);
+	res = malloc((ft_strlen(s) + 1) * sizeof(char));
+
+	if(!res || !s)
+		return (NULL);
+
+	i = 0;
+
+	while (s[i])
+	{
+		res[i] = f(i, s[i]);
+		i++;
+	}
+
+	res [i] = '\0';
+	return(res);
+
 }
+
