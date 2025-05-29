@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 10:27:30 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/29 12:00:04 by danielg3         ###   ########.fr       */
+/*   Created: 2025/05/08 15:20:24 by danielg3          #+#    #+#             */
+/*   Updated: 2025/05/09 12:06:06 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*a;
-	unsigned char	*b;
-
-	a = (unsigned char *)dest;
-	b = (unsigned char *)src;
-
-	if (src == NULL && dest == NULL)
-		return (dest);
-
-	while (n > 0)
-	{
-		*a = *b;
-		a++;
-		b++;
-		n--;
-	}
-	return(dest);
+	write(fd, &c, 1);
 }
+

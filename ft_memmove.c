@@ -6,33 +6,25 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 10:30:18 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/22 11:55:36 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 15:49:46 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" // no entiendo esta
 
-void *ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char	*a_src;
-	unsigned char	*b_dest;
-	size_t 			i;
+	char *tmp;
+	char *dest;
 
-	if (!src && !dest)
-		return (NULL);
-
-	a_src = (unsigned char *)src;
-	b_dest = (unsigned char *)dest;
-	i = 0;
-
-	if (b_dest > a_src)
-		while(len-- > 0)
-			b_dest[len] = a_src[len];
-
+	tmp = (char *)src;
+	dest = (char *)dst;
+	if (tmp < dest)
+	{
+		while (n--)
+			dest[n] = tmp[n];
+	}
 	else
-		while(i++ < len)
-			b_dest[i] = a_src[i];
-
-	return(dest);
-
+		ft_memcpy(dest, tmp, n);
+	return (dst);
 }

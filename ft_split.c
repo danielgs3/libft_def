@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 10:55:07 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/27 19:01:44 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 11:15:19 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,7 @@ char **ft_split(char const *s, char c)
 // 	free(res);
 // 	return (0);
 // }
+
 // #include <stdio.h>
 // #include <stdlib.h>
 
