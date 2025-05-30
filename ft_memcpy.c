@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 10:27:30 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/29 12:00:04 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 19:12:18 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	a = (unsigned char *)dest;
 	b = (unsigned char *)src;
-
 	if (src == NULL && dest == NULL)
 		return (dest);
-
 	while (n > 0)
 	{
 		*a = *b;
@@ -30,5 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		b++;
 		n--;
 	}
-	return(dest);
+	return (dest);
 }

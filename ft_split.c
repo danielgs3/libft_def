@@ -6,32 +6,30 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 10:55:07 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/29 11:15:19 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/30 10:41:42 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void free_res(char **res)
+static void	free_res(char **res)
 {
 	unsigned int	i;
-	i = 			0;
 
-	while(res[i] != NULL)
+	i = 0;
+	while (res[i] != NULL)
 	{
 		free(res[i]);
 		i++;
 	}
 }
 
-static char **word_selector(char *s, char c, char	**res)
+static char	**word_selector(char *s, char c, char **res, unsigned int k)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
-	k = 0;
 	while (s[i] != 0)
 	{
 		while (s[i] == c && s[i])
@@ -41,8 +39,8 @@ static char **word_selector(char *s, char c, char	**res)
 			j++;
 		if (j > 0)
 		{
-			res[k] = ft_substr(s, i, j); // podría ser que tenga que chechkear si el s está vacio
-			if((!res[k]) && (j > 0))
+			res[k] = ft_substr(s, i, j);
+			if ((!res[k]) && (j > 0))
 			{
 				free_res(res);
 				return (NULL);
@@ -57,9 +55,9 @@ static char **word_selector(char *s, char c, char	**res)
 
 static int	word_counter(char *s, char c)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
 
 	i = 0;
 	k = 0;
@@ -72,12 +70,12 @@ static int	word_counter(char *s, char c)
 		{
 			j++;
 		}
-		if(s[i + j])
+		if (s[i + j])
 			k++;
 		i = i + j;
 	}
-
-	return(k);
+	k++;
+	return (k);
 }
 
 // static int word_counter(char *s, char c)
@@ -95,27 +93,55 @@ static int	word_counter(char *s, char c)
 //         j = 0;
 //         while (s[i + j] != c && s[i + j])
 //             j++;
-//         if (j > 0)  // Cambio aquí: cuenta la palabra si j > 0, no si s[i+j] es distinto de 0
+//         if (j > 0)  // Cambio aquí: cuenta la palabra si j > 0,
+// no si s[i + j] es distinto de 0
 //             k++;
 //         i = i + j;
 //     }
 //     return (k);
 // }
-char **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 
 	res = malloc(((word_counter((char *)s, c)) + 1) * sizeof(char *));
 	if (res == NULL)
-		return(NULL);
-	res = word_selector((char *)s, c, res);
-	if(res == NULL)
+		return (NULL);
+	res = word_selector((char *)s, c, res, 0);
+	if (res == NULL)
 		return (free(res), NULL);
-
 	return (res);
 }
 
-// #include <stdio.h>
+#include <stdio.h>
+
+int main()
+{
+	char *s = ft_strdup("      Trip   ouille       ");
+	char **res;
+	res = ft_split(s , ' ');
+	int i = 0;
+	while (res[i] != NULL)
+	{
+		printf("X%sX\n", res[i++]);
+	}
+	free(res[0]);
+	free(res[1]);
+	/* free(res[2]);
+	free(res[3]);
+	free(res[4]);
+	free(res[5]);
+	free(res[6]);
+	free(res[7]);
+	free(res[8]);
+	free(res[9]); */
+	free(res);
+	free(s);
+	return (0);
+}
+
+
 
 // int main()
 // {
@@ -158,5 +184,5 @@ char **ft_split(char const *s, char c)
 // 	free(res[0]);
 // 	free(res[1]); // aquí accedés a memoria que no fue reservada
 // 	free(res);
-// 	return 0;
+// 	return (0);
 // }

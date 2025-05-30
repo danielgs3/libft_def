@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:03:59 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/27 15:32:49 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 18:50:15 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t	j;
+
 	j = 0;
 	while (s[j])
 		j++;
-	return(j);
+	return (j);
 }

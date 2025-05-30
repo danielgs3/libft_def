@@ -6,15 +6,15 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:47:45 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/09 14:16:11 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 18:29:50 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *a;
+	unsigned char	*a;
 
 	a = (unsigned char *)s;
 	while (n > 0)
@@ -23,5 +23,5 @@ void *ft_memset(void *s, int c, size_t n)
 		a++;
 		n--;
 	}
-	return(s);
+	return (s);
 }

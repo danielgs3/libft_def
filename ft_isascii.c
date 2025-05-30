@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 10:59:53 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/15 18:35:10 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 19:14:32 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
-	return(0); 
+	return (0);
 }

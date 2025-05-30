@@ -6,17 +6,18 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 03:02:04 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/29 12:14:52 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 18:49:15 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-	char i;
+	char	i;
+
 	i = c - 32;
 	if (c >= 'a' && c <= 'z')
-		return(i);
-	return(c);
+		return (i);
+	return (c);
 }

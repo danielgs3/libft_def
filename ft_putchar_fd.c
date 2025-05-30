@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 15:20:24 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/09 12:06:06 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 18:28:52 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-

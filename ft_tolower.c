@@ -6,17 +6,18 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 03:02:04 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/29 12:13:28 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/29 18:49:25 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	int i;
+	int	i;
+
 	i = c + 32;
 	if (c >= 'A' && c <= 'Z')
-		return(i);
-	return(c); 
+		return (i);
+	return (c);
 }
