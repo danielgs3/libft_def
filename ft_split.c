@@ -6,7 +6,7 @@
 /*   By: danielg3 <danielg3@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 10:55:07 by danielg3          #+#    #+#             */
-/*   Updated: 2025/05/30 10:41:42 by danielg3         ###   ########.fr       */
+/*   Updated: 2025/05/31 11:08:34 by danielg3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,39 +67,13 @@ static int	word_counter(char *s, char c)
 			i++;
 		j = 0;
 		while (s[i + j] != c && s[i + j])
-		{
 			j++;
-		}
-		if (s[i + j])
+		if (j > 0)
 			k++;
 		i = i + j;
 	}
-	k++;
 	return (k);
 }
-
-// static int word_counter(char *s, char c)
-// {
-//     unsigned int i;
-//     unsigned int j;
-//     unsigned int k;
-
-//     i = 0;
-//     k = 0;
-//     while (s[i] != 0)
-//     {
-//         while (s[i] == c && s[i])
-//             i++;
-//         j = 0;
-//         while (s[i + j] != c && s[i + j])
-//             j++;
-//         if (j > 0)  // Cambio aquí: cuenta la palabra si j > 0,
-// no si s[i + j] es distinto de 0
-//             k++;
-//         i = i + j;
-//     }
-//     return (k);
-// }
 
 char	**ft_split(char const *s, char c)
 {
@@ -114,34 +88,32 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-	char *s = ft_strdup("      Trip   ouille       ");
-	char **res;
-	res = ft_split(s , ' ');
-	int i = 0;
-	while (res[i] != NULL)
-	{
-		printf("X%sX\n", res[i++]);
-	}
-	free(res[0]);
-	free(res[1]);
-	/* free(res[2]);
-	free(res[3]);
-	free(res[4]);
-	free(res[5]);
-	free(res[6]);
-	free(res[7]);
-	free(res[8]);
-	free(res[9]); */
-	free(res);
-	free(s);
-	return (0);
-}
-
-
+// int main()
+// {
+// 	char *s = ft_strdup("      Trip   ouille       ");
+// 	char **res;
+// 	res = ft_split(s , ' ');
+// 	int i = 0;
+// 	while (res[i] != NULL)
+// 	{
+// 		printf("X%sX\n", res[i++]);
+// 	}
+// 	free(res[0]);
+// 	free(res[1]);
+// 	/* free(res[2]);
+// 	free(res[3]);
+// 	free(res[4]);
+// 	free(res[5]);
+// 	free(res[6]);
+// 	free(res[7]);
+// 	free(res[8]);
+// 	free(res[9]); */
+// 	free(res);
+// 	free(s);
+// 	return (0);
+// }
 
 // int main()
 // {
